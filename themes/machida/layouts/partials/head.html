@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html{{ with .Site.LanguageCode }} lang="{{ . }}" {{ end }}>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="{{ delimit .Site.Params.Keywords ", " }}" name="keywords">
+    <meta content="{{ .Site.Params.Author }}" name="author">
+    <meta property="og:title"
+      content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:description" content="{{ .Site.Params.Description }}">
+    <meta property="og:type" content="website" />
+    <title>{{ if eq .IsHome true }}{{ .Site.Title }} - {{ .Site.Params.description }}{{ else }}{{ .Title }} |
+      {{ .Site.Title }}{{ end }}</title>
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico">
+
+    <link rel="stylesheet" href="{{ .Site.Params.stylesheet }}">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.12/css/all.css"
+      integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanjp_s-narrow.min.css">
+
+    <script src="{{ .Site.Params.javascript }}"></script>
+  </head>

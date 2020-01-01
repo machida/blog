@@ -1,0 +1,27 @@
+.article__header
+  +media-breakpoint-up(md)
+    margin-bottom: 2em
+  +media-breakpoint-down(sm)
+    margin-bottom: 1.25em
+
+.article__date
+  display: block
+  +media-breakpoint-up(md)
+    margin-bottom: 1rem
+  +media-breakpoint-down(sm)
+    margin-bottom: 1rem
+
+.article__title
+  line-height: 1.5
+  display: flex
+  font-weight: 800
+  +media-breakpoint-up(md)
+    +text-block(2.75rem)
+  +media-breakpoint-down(sm)
+    +text-block(1.75rem)
+
+.article__title-link
+  text-decoration: none
+  display: block
+  color: $default-text
+  pointer-events: none

@@ -1,0 +1,63 @@
+.previous-next-nav
+  +media-breakpoint-up(md)
+    margin-top: 5rem
+  +media-breakpoint-down(sm)
+    margin-top: 2rem
+
+.previous-next-nav__items
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.previous-next-nav__item
+  +media-breakpoint-up(md)
+    max-width: 50%
+    &.is-previous
+      text-align: left
+      flex: 2
+    &.is-index
+      text-align: center
+      flex: 1
+    &.is-next
+      text-align: right
+      flex: 2
+  +media-breakpoint-down(sm)
+    max-width: 2.75rem
+    flex-basis: 2.75rem
+
+.previous-next-nav__link
+  +flex-link
+  align-items: center
+  +text-block(1rem 1.5, $default-text)
+  +hover-link
+  +media-breakpoint-up(md)
+    .previous-next-nav__item.is-previous &,
+    .previous-next-nav__item.is-next &
+      span
+        display: block
+        max-width: 100%
+        white-space: nowrap
+        text-overflow: ellipsis
+        overflow: hidden
+    .previous-next-nav__item.is-previous &
+      justify-content: flex-start
+    .previous-next-nav__item.is-index &
+      justify-content: center
+    .previous-next-nav__item.is-next &
+      justify-content: flex-end
+  +media-breakpoint-down(sm)
+    justify-content: center
+    +text-block(1rem 1, center)
+    +size(2.75rem)
+    border-radius: 50%
+
+.previous-next-nav__icon
+  font-size: .875rem
+  &.is-previous
+    margin-right: .5rem
+    +media-breakpoint-down(sm)
+      margin: 0
+  &.is-next
+    margin-left: .5rem
+    +media-breakpoint-down(sm)
+      margin: 0

@@ -1,0 +1,38 @@
+.global-nav__background
+  +position(fixed, left 0, top 0, right 0, bottom 0)
+  display: none
+  input[type=checkbox]:checked ~ .global-nav &
+    display: block
+
+.global-nav__inner
+  +size(0)
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  +position(fixed, left 50%, top 50%, 1)
+  transform: translate(-50%, -50%)
+  background-color: rgba(black, .8)
+  border-radius: 2px
+  opacity: 0
+  transition: all .2s ease-out
+  input[type=checkbox]:checked ~ .global-nav &
+    opacity: 1
+    +size(18rem)
+
+.global-nav__items
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  +size(20rem)
+
+.global-nav__item
+  width: 100%
+
+.global-nav__item-link
+  +text-block(1.125rem 1.4, $reversal-text flex)
+  justify-content: center
+  +padding(vertical, .75rem)
+  font-family: Nunito, sans-serif
+  +hover-link

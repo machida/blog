@@ -1,0 +1,30 @@
+.post-body
+  +long-text-style(1.375rem, 1rem)
+  pre[class*="language-"]
+    padding: 0
+    +margin(vertical, 1.5em)
+    background-color: white
+    border: solid 1px #e6e5da
+    code
+      border: none
+      +padding(vertical, 1.25rem)
+      +padding(horizontal, 1rem)
+      font-size: .875rem
+      text-shadow: none
+  li code,
+  p code
+    line-height: 1.4
+    background-color: white
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    font-weight: 800
+  h2 + p
+    img
+      margin-top: 1.25em
+  p
+    -webkit-font-kerning: none
+    font-kerning: none

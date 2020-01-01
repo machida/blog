@@ -1,0 +1,36 @@
+<nav class="previous-next-nav">
+  <div class="container">
+    <ul class="previous-next-nav__items">
+      {{ if .PrevInSection }}
+      <li class="previous-next-nav__item is-previous">
+        <a href="{{.PrevInSection.RelPermalink}}" rel="prev" title="{{ .PrevInSection.Title }}"
+          class="previous-next-nav__link">
+          <i class="fas fa-angle-left previous-next-nav__icon is-previous"></i>
+          <span class="is-hidden-sm-down">{{ .PrevInSection.Title }}</span>
+        </a>
+      </li>
+      {{ else }}
+      <li class="previous-next-nav__item is-previous"></li>
+      {{ end }}
+
+      <li class="previous-next-nav__item is-index">
+        <a href="/" rel="index" title="index" class="previous-next-nav__link">
+          <i class="fas fa-home previous-next-nav__icon is-index"></i>
+        </a>
+      </li>
+
+
+      {{ if .NextInSection }}
+      <li class="previous-next-nav__item is-next">
+        <a href="{{.NextInSection.RelPermalink}}" rel="next" title="{{ .NextInSection.Title }}"
+          class="previous-next-nav__link">
+          <span class="is-hidden-sm-down">{{ .NextInSection.Title }}</span>
+          <i class="fas fa-angle-right previous-next-nav__icon is-next"></i>
+        </a>
+      </li>
+      {{ else }}
+      <li class="previous-next-nav__item is-next"></li>
+      {{ end }}
+    </ul>
+  </div><!-- .container -->
+</nav>

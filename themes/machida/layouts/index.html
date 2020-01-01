@@ -1,0 +1,15 @@
+{{ partial "head" . }}
+<body class="is-list">
+  {{ partial "header" . }}
+
+  <main class="list">
+    <div class="list__items">
+      {{ range sort .Paginator.Pages }}
+        {{ partial "list-item" . }}
+      {{ end }}
+    </div><!-- .list__items -->
+    {{ partial "pager" . }}
+  </main><!-- .list -->
+
+  {{ partial "footer" . }}
+</body>

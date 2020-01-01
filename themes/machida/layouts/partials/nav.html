@@ -1,0 +1,9 @@
+<nav>
+  <div class="container">
+    <ul class="social">
+      {{ range .Site.Params.social }}
+      <li class="social-item"><a href="{{ .url }}"><span class="icon"><i class="{{ .fa_icon_class }}"></i></span></a></li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>

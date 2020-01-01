@@ -1,0 +1,67 @@
+.header-nav__input
+  +position(absolute, left 0, top 0)
+  opacity: 0
+
+.header-nav__button
+  margin-left: .75rem
+  +size(2.75rem)
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  +position(relative, 2)
+  transition: all .2s ease-out
+  &::before
+    border-radius: 50%
+    transition: all .2s ease-out
+    display: block
+    content: ""
+    +size(0)
+    +position(absolute, left 50%, top 50%)
+    transform: translate(-50%, -50%)
+    background-color: rgba(black, .1)
+    opacity: 0
+  &:hover::before
+    +size(100%)
+    opacity: 1
+
+$button-icon-size: 1.25rem
+
+.header-nav__button-inner
+  +size($button-icon-size calc(#{$button-icon-size} * .725))
+  +position(relative)
+  display: flex
+  align-items: center
+  justify-content: center
+  &::before
+    content: ""
+    +size($button-icon-size 1px)
+    background-color: $default-text
+    display: flex
+    +position(absolute, left 50%, top 50%)
+    transform: translate(-50%, -50%)
+    opacity: 1
+    transition: all .2s ease-out
+    input[type=checkbox]:checked ~  .header-nav__button &
+      opacity: 0
+
+.header-nav__button-icon
+  &::before,
+  &::after
+    content: ""
+    +size($button-icon-size 1px)
+    background-color: $default-text
+    display: flex
+    +position(absolute, left 50%)
+    transform: translate(-50%, 0)
+    transition: all .2s ease-out
+  &::before,
+    +position(top 0)
+    input[type=checkbox]:checked ~ .header-nav__button &
+      +position(absolute, left 50%, top 50%)
+      transform: translate(-50%, -50%) rotate(-45deg)
+  &::after
+    +position(bottom 0)
+    input[type=checkbox]:checked ~  .header-nav__button &
+      +position(absolute, left 50%, top 50%)
+      transform: translate(-50%, -50%) rotate(45deg)

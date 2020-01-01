@@ -1,3 +1,38 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+languageCode = "ja-jp"
+theme = "machida"
+hasCJKLanguage = true
+
+copyright = "<a href=\"https://machida.github.com/\" target=\"_blank\">machida</a>"
+disqusShortname = ""
+summarylength = 200
+title = "machida"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  description = "machida"
+  keywords = []
+  author = "machida"
+  profile = "合同会社フィヨルドのデザイナ"
+  displayauthor = false
+  DateForm = "2006年01月02日"
+  sharingicons = true
+  stylesheet = "/assets/application.css"
+  javascript = "/assets/application.js"
+
+[params.highlight]
+theme = "monokai-sublime"
+
+[[params.social]]
+url = "https://github.com/machida"
+fa_icon_class = "fab fa-github"
+
+[[params.social]]
+url = "https://twitter.com/machida"
+fa_icon_class = "fab fa-twitter"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon_class = "fas fa-rss"

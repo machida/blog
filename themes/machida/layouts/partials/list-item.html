@@ -1,0 +1,13 @@
+<article class="list-item">
+  <div class="container">
+    <div class="list-item__inner">
+      <time class="list-item__date">
+        {{ .Date.Format .Site.Params.DateForm }}
+      </time>
+      <h1 class="list-item__title">
+        {{ if .Draft }}[Draft]{{ end }}
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h1>
+    </div><!-- .list-item__inner -->
+  </div><!-- .container -->
+</article>
