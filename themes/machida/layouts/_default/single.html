@@ -10,8 +10,10 @@
         </time>
         <h1 class="article__title">{{ if .Draft }}[Draft]{{ end }}{{ .Title }}</h1>
       </header>
-      <div class="article__body post-body">
-        {{ .Content }}
+      <div class="article__body">
+        <div id="" class="long-text">
+          {{ .Content }}
+        </div>
       </div>
     </article>
   </div>

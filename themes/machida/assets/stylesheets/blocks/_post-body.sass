@@ -1,30 +1,8 @@
-.post-body
-  +long-text-style(1.375rem, 1rem)
-  pre[class*="language-"]
-    padding: 0
-    +margin(vertical, 1.5em)
-    background-color: white
-    border: solid 1px #e6e5da
-    code
-      border: none
-      +padding(vertical, 1.25rem)
-      +padding(horizontal, 1rem)
-      font-size: .875rem
-      text-shadow: none
-  li code,
-  p code
-    line-height: 1.4
-    background-color: white
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6
-    font-weight: 800
-  h2 + p
-    img
-      margin-top: 1.25em
-  p
-    -webkit-font-kerning: none
-    font-kerning: none
+.article
+  // 1rem(16px) @ 30rem(480px) increasing to 1.375rem(22px) @ 702.5rem(11240px)
+  @media (min-width: 30rem)
+    font-size: calc(1rem + ((1vw - 0.3rem) * 0.9317))
+    // Where: * 0.9317 = 100 * font_Size_Difference / viewport_Width_Difference
+  // Prevent font scaling beyond this breakpoint
+  @media (min-width: 70.25rem)
+    font-size: 1.375rem

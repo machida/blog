@@ -23,7 +23,7 @@ title = "machida"
   javascript = "/assets/application.js"
 
 [params.highlight]
-theme = "monokai-sublime"
+theme = "github"
 
 [[params.social]]
 url = "https://github.com/machida"

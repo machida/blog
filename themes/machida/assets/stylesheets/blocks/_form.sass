@@ -20,21 +20,21 @@
   +text-block(.625rem 1, 400 flex)
   height: .875rem
   +padding(horizontal, .1875rem)
-  background-color: $accent-color
+  background-color: $accent
   align-items: center
   margin-left: .25rem
 
 .form-item__text-input,
 .form-item__textarea
   border-radius: 2px
-  border: solid 1px $base-color
+  border: solid 1px $base
   background-color: #e8e8e8
   width: 100%
   padding: .375rem .5rem
   +text-block(1rem 1.6)
   transition: all .2s ease-in
   &:focus
-    background-color: $base-color
+    background-color: $base
     border-color: #e8e8e8
     box-shadow: rgba(black, .05) 0 .0625rem 0 inset
 
@@ -49,17 +49,17 @@
   margin-top: .25rem
 
 .form-actions-item__submit
-  border: solid .25rem $accent-color
+  border: solid .25rem $accent
   display: flex
   align-items: center
   justify-content: center
   +size(16rem 3.25rem)
-  +text-block(1rem 1, $accent-color 600)
+  +text-block(1rem 1, $accent 600)
   cursor: pointer
 
 .privacy
   border: solid .125rem $default-text
-  background-color: $base-color
+  background-color: $base
   padding: 1rem
   +overflow(hidden auto)
   height: 10rem
