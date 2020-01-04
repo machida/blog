@@ -26,33 +26,32 @@
   h4,
   h5,
   h6
-    font-weight: 800
-  h2
-    +text-block(1.375em 1.6 0 .75em)
-    border-left: .25em solid $default-text
-    padding: 3px 0 3px 14px
-  h1 + h2
-    margin-top: 1em
-  * + h2
-    margin-top: 1.4em
-  h2 + h3
-    margin-top: 1.4em
+    font-weight: 700
+    letter-spacing: .025em
   * + h2,
   * + h3,
   * + h4,
-  * + h5
-    margin-top: 1.5em
+  * + h5,
+  * + h6
+    margin-top: 1.25em
+  h2
+    +text-block(1.625em 1.45)
+    margin-bottom: .75em
   h3
-    +text-block(1.25em 1.6)
+    +text-block(1.375em 1.6)
     margin-bottom: .625em
   h4
-    +text-block(1.125em 1.6)
+    +text-block(1.25em 1.6)
     margin-bottom: .625em
   h5
+    +text-block(1.125em 1.6)
+    margin-bottom: .625em
+  h6
     +text-block(1em 1.6)
     margin-bottom: .625em
   p
     +text-block(1em 1.8)
+    letter-spacing: .025em
     margin-bottom: 1.5em
   a
     +link-text
@@ -72,15 +71,16 @@
     margin-bottom: 1.5em
     code
       border: solid 1px mix($font, $background, 20%)
-      +text-block(.9375em 1.5)
+      +text-block(.75em 1.5)
+      border-radius: .25rem
       overflow: auto
       display: block
       width: 100%
-      padding: .875em
+      padding: .75em .875em
   p,
   li
     code
-      +text-block(.875em 1.7, $default-text inline-flex)
+      +text-block(.875em, $default-text inline)
       align-items: center
       letter-spacing: 0
       +padding(horizontal, .25rem)
@@ -93,8 +93,8 @@
     +margin(vertical, 1.5em 2em)
     &:before
       display: block
-      +text-block(.9375rem 1, center)
-      +letter-spacing-center(.25rem)
+      +text-block(.9375em 1, center)
+      +letter-spacing-center(.25em)
   img
     max-width: 100%
     height: auto
@@ -114,17 +114,16 @@
   ul,
   ol
     list-style-position: outside
-    margin-left: 1.75em
+    margin-left: 1.125em
     margin-bottom: 1.5em
   li
     +text-block(1em 1.607)
+    letter-spacing: .025em
     +margin(vertical, .25em)
     &:first-child
       margin-top: 0
     &:last-child
       margin-bottom: 0
-    input
-      margin-right: .25rem
   p + ul,
   p + ol
     margin-top: 1em
@@ -199,9 +198,6 @@
   h2 + p
     img
       margin-top: 1.25em
-  p
-    -webkit-font-kerning: none
-    font-kerning: none
 
 .long-text
   +long-text-style

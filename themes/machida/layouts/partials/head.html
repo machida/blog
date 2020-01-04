@@ -13,11 +13,12 @@
     <title>{{ if eq .IsHome true }}{{ .Site.Title }} - {{ .Site.Params.description }}{{ else }}{{ .Title }} |
       {{ .Site.Title }}{{ end }}</title>
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico">
-
     <link rel="stylesheet" href="{{ .Site.Params.stylesheet }}">
+    <!-- WebFont -->
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.12/css/all.css"
       integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanjp_s-narrow.min.css">
 
     <script src="{{ .Site.Params.javascript }}"></script>

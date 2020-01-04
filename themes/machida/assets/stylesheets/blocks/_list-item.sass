@@ -1,9 +1,26 @@
 .list-item
   &:not(:first-child)
-    margin-top: 3rem
+    margin-top: 2.25em
 
 .list-item__inner
-  display: flex
+  color: $default-text
+  +media-breakpoint-up(md)
+    display: flex
 
 .list-item__date
-  margin-right: 1em
+  white-space: nowrap
+  +media-breakpoint-up(md)
+    display: flex
+    &::after
+      content: "•••"
+      +margin(horizontal, 1em)
+
+.list-item__title
+  font-weight: 700
+  font-size: 1.25em
+  line-height: 1.4
+  +media-breakpoint-up(md)
+    margin-top: -.25em
+  .list-item__inner:hover &
+    color: $accent
+    text-decoration: underline

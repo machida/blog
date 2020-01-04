@@ -1,8 +1,0 @@
-.article
-  // 1rem(16px) @ 30rem(480px) increasing to 1.375rem(22px) @ 702.5rem(11240px)
-  @media (min-width: 30rem)
-    font-size: calc(1rem + ((1vw - 0.3rem) * 0.9317))
-    // Where: * 0.9317 = 100 * font_Size_Difference / viewport_Width_Difference
-  // Prevent font scaling beyond this breakpoint
-  @media (min-width: 70.25rem)
-    font-size: 1.375rem

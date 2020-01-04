@@ -6,6 +6,8 @@ copyright = "<a href=\"https://machida.github.com/\" target=\"_blank\">machida</
 disqusShortname = ""
 summarylength = 200
 title = "machida"
+pygmentsUseClasses = true
+pygmentsCodefences = true
 
 [taxonomies]
   category = "categories"
@@ -16,14 +18,9 @@ title = "machida"
   keywords = []
   author = "machida"
   profile = "合同会社フィヨルドのデザイナ"
-  displayauthor = false
   DateForm = "2006年01月02日"
-  sharingicons = true
   stylesheet = "/assets/application.css"
   javascript = "/assets/application.js"
-
-[params.highlight]
-theme = "github"
 
 [[params.social]]
 url = "https://github.com/machida"
